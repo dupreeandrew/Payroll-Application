@@ -160,7 +160,11 @@ public enum EmployeeFile {
     }
 
     public ArrayList<Employee> getDeepCopyOfEmployees() {
-        return new ArrayList<>(employeeDataList);
+        List<Employee> copiedEmployeeDataList = new ArrayList<>();
+        for (Employee employee : employeeDataList) {
+            copiedEmployeeDataList.add(new Employee(employee.getId(), employee.getName(), employee.getSalary());
+        }
+        return copiedEmployeeDataList;
     }
 
     /**
